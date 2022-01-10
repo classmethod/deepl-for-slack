@@ -37,6 +37,11 @@
     "SLACK_REQUEST_LOG_ENABLED": {
       "description": "Slack App Request Log Feature (0: disabled, 1: enabled)",
       "value": "0"
+    },
+    "IGNORED_STAMPS": {
+      "description": "Ignored stamps to trigger interpretations",
+      "value": "",
+      "required": false
     }
   },
   "image": "heroku/nodejs"

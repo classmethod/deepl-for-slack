@@ -1,6 +1,6 @@
 ## DeepL App for Slack
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seratch/deepl-for-slack/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/classmethod/deepl-for-slack/tree/master)
 
 ## Features
 
@@ -93,7 +93,7 @@ Use the [App Manifest file](https://github.com/seratch/deepl-for-slack/blob/mast
 * Click **Open DeepL Tool**
 * Enter a text and the language on the modal
 
-### License 
+### License
 
 The MIT License
 
