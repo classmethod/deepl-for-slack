@@ -3,14 +3,23 @@ import { ReactionAddedEvent } from './types/reaction-added';
 import { reactionToLang } from './languages';
 import { WebClient } from '@slack/web-api';
 
+const ignoredStamps = (process.env.IGNORED_STAMPS || '').split(/,/)
+
 export function lang(event: ReactionAddedEvent): string | null {
   const reactionName = event.reaction;
+
+  if (ignoredStamps.includes(reactionName)) {
+    return null
+  }
+
   if (reactionName.match(/flag-/)) { // flag-***
     const matched = reactionName.match(/(?!flag-\b)\b\w+/);
     if (matched != null) {
       const country = matched[0];
       return reactionToLang[country];
     }
+  } else { // jp, fr, etc.
+    return reactionToLang[reactionName];
   }
   return null;
 }
